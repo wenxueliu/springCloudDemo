@@ -1,0 +1,28 @@
+---
+
+server:
+  port: 8010
+#默认使用配置
+spring:
+  application:
+    name: demo
+
+logging:
+  level:
+    cn.springcloud.book.feign.service.HelloFeignService: debug
+
+#公共配置与profiles选择无关
+#mybatis:
+#  typeAliasesPackage: com.wenxueliu.domain
+#  mapperLocations: classpath:mapper/*.xml
+#
+##开发配置
+#spring:
+#  profiles: dev
+#
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/test
+#    username: test
+#    password: test
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+
