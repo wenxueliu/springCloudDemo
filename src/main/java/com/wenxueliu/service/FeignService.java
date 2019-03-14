@@ -2,6 +2,7 @@ package com.wenxueliu.service;
 
 import com.wenxueliu.config.FeignServiceConfig;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,6 +20,6 @@ public interface FeignService {
      * @return
      */
     @RequestMapping(value = "/search/repositories", method = RequestMethod.GET)
-    String searchRepo(@RequestParam("q") String queryStr);
-
+    //String searchRepo(@RequestParam("q") String queryStr);
+    ResponseEntity<byte[]> searchRepo(@RequestParam("q") String queryStr);
 }

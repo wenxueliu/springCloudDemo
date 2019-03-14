@@ -4,7 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
 import lombok.experimental.Accessors;
-import org.apache.ibatis.type.Alias;
+//import org.apache.ibatis.type.Alias;
 
 /**
  * Created by liuwenxue on 02/03/2019.
@@ -12,7 +12,7 @@ import org.apache.ibatis.type.Alias;
 //@Accessors(chain = true)
 //@Data
 @Builder
-@Alias(value="UserPo")
+//@Alias(value="UserPo")
 public class UserPo {
     @NonNull
     private int id;

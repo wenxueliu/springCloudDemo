@@ -9,7 +9,54 @@ spring:
 
 logging:
   level:
-    cn.springcloud.book.feign.service.HelloFeignService: debug
+    com.wenxueliu.service.FeignService: debug
+
+feign.hystrix.enable: true
+feign:
+    okhttp:
+        enabled: true
+    httpclient:
+        enabled: false
+    client:
+        config:
+            default:
+                connectTimeout: 5000
+                readTimeout: 5000
+                loggerLevel: basic
+            github-test:
+                connectTimeout: 5000
+                readTimeout: 5000
+                loggerLevel: full
+                #errorDecoder: com.example.SimpleErrorDecoder
+                #retryer: com.example.SimpleRetryer
+                #requestInterceptors:
+                #    - com.example.FooRequestInterceptor
+                #    - com.example.BarRequestInterceptor
+                #decoder404: false
+                #encoder: com.example.SimpleEncoder
+                #decoder: com.example.SimpleDecoder
+                #contract: com.example.SimpleContract
+    # 开启 gzip 压缩
+    compression:
+        request:
+            enabled: true
+            mime-types: text/xml,application/xml,application/json # 配置压缩支持的MIME TYPE
+            min-request-size: 2048  # 配置压缩数据大小的下限
+        response:
+            enabled: true # 配置响应GZIP压缩
+
+    hystrix:
+        shareSecurityContext: true
+        command:
+            default:
+                circuitBreaker:
+                    sleepWindowInMilliseconds: 100000
+                    forceClosed: true
+                exception:
+                    isolation:
+                        thread:
+                            timeoutInMilliseconds: 600000
+
 
 #公共配置与profiles选择无关
 #mybatis:
