@@ -61,7 +61,7 @@
 		</dependency>
 		-->
 
-		<!-- httpclient start
+		<!-- httpclient start -->
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
@@ -70,9 +70,9 @@
 		<dependency>
 			<groupId>com.netflix.feign</groupId>
 			<artifactId>feign-httpclient</artifactId>
-			<version>8.17.0</version>
+			<version>8.9.2</version>
 		</dependency>
-		httpclient end-->
+		<!-- httpclient end-->
 
 		<!-- okhttp start -->
 		<dependency>
@@ -92,6 +92,25 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
+		<!-- swagger config start -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+		<!-- swagger config start -->
 	</dependencies>
 
 	<build>

@@ -6,17 +6,29 @@ server:
 spring:
   application:
     name: demo
+  output:
+    ansi:
+      enable: always
 
 logging:
+  config: classpath:logback-spring.xml
+  path: /tmp/demo
+  file: demo.log
   level:
+    root: debug
     com.wenxueliu.service.FeignService: debug
+
+eureka:
+  client:
+    service-url:
+           defaultZone: http://localhost:8761/eureka
 
 feign.hystrix.enable: true
 feign:
     okhttp:
-        enabled: true
-    httpclient:
         enabled: false
+    httpclient:
+        enabled: true
     client:
         config:
             default:
