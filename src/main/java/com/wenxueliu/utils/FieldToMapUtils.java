@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
  * Created by liuwenxue on 31/03/2019.
  *
  * 将类的属性及属性的值转换为 map
+ *
+ * from feign source code
  */
 public class FieldToMapUtils {
 

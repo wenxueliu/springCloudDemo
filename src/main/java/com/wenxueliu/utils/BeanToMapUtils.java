@@ -10,6 +10,8 @@ import java.util.*;
  * Created by liuwenxue on 31/03/2019.
  *
  * 根据对象的 getter 方法，获取参数与值的 map
+ *
+ * from feign source code
  */
 public class BeanToMapUtils {
     private final Map<Class<?>, ObjectParamMetadata> classToMetadata =
