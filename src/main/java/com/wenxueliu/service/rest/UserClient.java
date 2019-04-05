@@ -1,7 +1,7 @@
-package com.wenxueliu.service;
+package com.wenxueliu.service.rest;
 
 import com.wenxueliu.model.User;
-import org.springframework.cloud.openfeign.FeignClient;
+//import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * POST /user/update body User
  */
 
-@FeignClient(name = "provider")
-public interface UserFeignService {
+//@FeignClient(name = "provider")
+public interface UserClient {
     @RequestMapping(value = "/user/add", method = RequestMethod.GET)
     public String addUser(User user);
 

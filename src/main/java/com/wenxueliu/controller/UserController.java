@@ -1,7 +1,7 @@
 package com.wenxueliu.controller;
 
 import com.wenxueliu.model.User;
-import com.wenxueliu.service.UserFeignService;
+import com.wenxueliu.service.rest.UserClient;
 import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +22,7 @@ public class UserController {
     private final static Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
-    private UserFeignService userFeignService;
+    private UserClient userClient;
 
     /**
      * 用于演示Feign的Get请求多参数传递
@@ -31,7 +31,7 @@ public class UserController {
      */
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String addUser( @RequestBody @ApiParam(name="用户",value="传入json格式",required=true) User user){
-        return userFeignService.addUser(user);
+        return userClient.addUser(user);
     }
 
     /**
@@ -41,6 +41,6 @@ public class UserController {
      */
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public String updateUser( @RequestBody @ApiParam(name="用户",value="传入json格式",required=true) User user){
-        return userFeignService.updateUser(user);
+        return userClient.updateUser(user);
     }
 }

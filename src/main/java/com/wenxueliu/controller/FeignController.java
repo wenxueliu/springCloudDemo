@@ -1,6 +1,6 @@
 package com.wenxueliu.controller;
 
-import com.wenxueliu.service.FeignService;
+import com.wenxueliu.service.rest.FeignService;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

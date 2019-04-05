@@ -37,12 +37,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<!-- OpenFeign start -->
+		<!-- Spring Feign start -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
-		<!-- OpenFeign end -->
+		<!-- Spring Feign end -->
+
 		<!--
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -60,27 +61,6 @@
 			<scope>runtime</scope>
 		</dependency>
 		-->
-
-		<!-- httpclient start -->
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.netflix.feign</groupId>
-			<artifactId>feign-httpclient</artifactId>
-			<version>8.9.2</version>
-		</dependency>
-		<!-- httpclient end-->
-
-		<!-- okhttp start -->
-		<dependency>
-			<groupId>com.squareup.okhttp3</groupId>
-			<artifactId>okhttp</artifactId>
-			<version>3.10.0</version>
-		</dependency>
-		<!-- okhttp end-->
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -111,6 +91,43 @@
 			<version>2.5.0</version>
 		</dependency>
 		<!-- swagger config start -->
+
+		<!-- OpenFeign start -->
+		<!-- jackson start -->
+		<dependency>
+			<groupId>io.github.openfeign</groupId>
+			<artifactId>feign-jackson</artifactId>
+		</dependency>
+		<!-- jackson end-->
+		<!-- okhttp start -->
+		<dependency>
+			<groupId>io.github.openfeign</groupId>
+			<artifactId>feign-okhttp</artifactId>
+		</dependency>
+		<!-- okhttp end-->
+		<!-- httpclient start
+		<dependency>
+			<groupId>com.netflix.feign</groupId>
+			<artifactId>feign-httpclient</artifactId>
+			<version>10.2.0</version>
+		</dependency>
+		-->
+		<!-- Feign file upload start -->
+		<dependency>
+			<groupId>io.github.openfeign.form</groupId>
+			<artifactId>feign-form</artifactId>
+			<version>3.0.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.openfeign.form</groupId>
+			<artifactId>feign-form-spring</artifactId>
+			<version>3.0.3</version>
+		</dependency>
+		<!-- Feign file upload end -->
+		<!-- OpenFeign end -->
+
+
 	</dependencies>
 
 	<build>
